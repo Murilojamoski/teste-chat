@@ -52,7 +52,7 @@ const Logar = (evento) =>{
     console.log(usuario)
     login.style.display = "none"
     chat.style.display = "flex"
-    webSocket = new WebSocket("ws://localhost:8080") // conecta com nosso server
+    webSocket = new WebSocket("wss://chatinm.onrender.com") // conecta com nosso server
     webSocket.onmessage = processarMsg //quando receber mensagem
 }
 
