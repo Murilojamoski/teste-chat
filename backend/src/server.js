@@ -9,6 +9,7 @@ wss.on("connection", (ws)=>{  //quando alguem conectar
     ws.on("error", console.error) // caso tenha erro ele manda pro console
 
     ws.on("message", (data)=>{ // quando alguem manda mensagem
+        console.log(data.toString())
         wss.clients.forEach((clients) => clients.send(data.toString())) // manda mensagem para todos os clientes (E converte pra string)
     })
 
